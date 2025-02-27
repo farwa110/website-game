@@ -1,0 +1,384 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#screen {
+  width: 100%;
+  aspect-ratio: 16/9;
+  position: relative;
+  overflow: hidden;
+  container-type: inline-size;
+}
+
+#start {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(svg/frontscreen2.svg);
+  background-size: cover;
+  /* display: none; */
+}
+#start_knap {
+  position: absolute;
+  top: 60%;
+  left: 45%;
+  width: 40%;
+  /* aspect-ratio: 229/153.07; */
+  aspect-ratio: 1920/ 1080;
+  background-image: url(svg/gamestartbutton.svg);
+  background-size: cover;
+  animation-name: pulse_kf;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#start_text {
+  position: absolute;
+  top: 27%;
+  left: 48%;
+  font-family: "Luckiest Guy";
+  color: green;
+  font-size: 1.6cqw;
+}
+
+#genstart1,
+#genstart2 {
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  width: 40%;
+  aspect-ratio: 229/153.07;
+  background-image: url(svg/gameoverbutton.svg);
+  background-size: cover;
+  animation-name: pulse_kf;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes pulse_kf {
+  100% {
+    scale: 1.2;
+  }
+}
+#game_over {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(svg/gameover.svg);
+  background-size: cover;
+  /* display: none; */
+}
+#game_over_text {
+  width: 60%;
+  height: 20%;
+  position: absolute;
+  top: 20%;
+  left: 7%;
+  font-size: 5cqw;
+  color: white;
+  font-family: "Luckiest Guy";
+}
+
+#level_complete {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(svg/levelcompletescreen.svg);
+  background-size: cover;
+  /* display: none; */
+}
+#level_complete_text {
+  width: 60%;
+  height: 20%;
+  position: absolute;
+  top: 37%;
+  left: 41%;
+  font-size: 2.8cqw;
+  color: green;
+  font-family: "Luckiest Guy";
+}
+#sounds {
+  position: absolute;
+  bottom: 0px;
+}
+#time_over {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(svg/gameoverscreen.svg);
+  background-size: cover;
+  /* display: none; */
+}
+#time_over_text {
+  width: 60%;
+  height: 20%;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  font-size: 5cqw;
+}
+
+.skjul {
+  display: none;
+}
+.synlig {
+  display: block;
+}
+#game_background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(svg/background.svg);
+  background-size: cover;
+}
+#game_elements {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#game_foreground {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(svg/foreground.svg);
+  background-size: cover;
+  pointer-events: none;
+}
+
+#game_ui {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+#score_board {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  aspect-ratio: 105/270;
+  width: 5%;
+  background-image: url(svg/lifeline.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#points {
+  font-family: "Pacifico", cursive;
+  font-size: 3cqw;
+  margin-top: 148%;
+  margin-left: 29%;
+}
+#life_board {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  aspect-ratio: 135/115;
+  width: 5%;
+  background-image: url(svg/life.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#liv {
+  font-family: "Pacifico", cursive;
+  font-size: xx-large;
+  margin-left: 120%;
+}
+#blueball_container1,
+#blueball_container2,
+#blueball_container3 {
+  position: absolute;
+  top: -25%;
+  width: 7%;
+  height: 21%;
+  z-index: 2000;
+  /* aspect-ratio: 135/115; */
+  aspect-ratio: 282 /474.2;
+}
+
+#blueball_sprite1,
+#blueball_sprite2,
+#blueball_sprite3 {
+  width: 100%;
+  height: 100%;
+  background-image: url(svg/blue.svg);
+  background-size: cover;
+}
+
+#redball_container1,
+#redball_container2,
+#redball_container3 {
+  position: absolute;
+  top: -25%;
+  z-index: 2000;
+  width: 7%;
+  height: 21%;
+  /* aspect-ratio: 135/115; */
+  aspect-ratio: 282.5/ 475.5;
+}
+
+#redball_sprite1,
+#redball_sprite2,
+#redball_sprite3 {
+  width: 100%;
+  height: 100%;
+  background-image: url(svg/red.svg);
+  background-size: cover;
+}
+.pos1 {
+  left: 20%;
+}
+.pos2 {
+  left: 30%;
+}
+.pos3 {
+  left: 40%;
+}
+.pos4 {
+  left: 50%;
+}
+.pos5 {
+  left: 60%;
+}
+.pos6 {
+  left: 70%;
+}
+.fald {
+  animation-name: fald_kf;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes fald_kf {
+  100% {
+    translate: 0 1500%;
+  }
+}
+.speed1 {
+  animation-duration: 5s;
+}
+
+.speed2 {
+  animation-duration: 2.5s;
+}
+
+.speed3 {
+  animation-duration: 2s;
+}
+
+.forsvind_blue {
+  animation-name: forsvind_blue_kf;
+  animation-duration: 0.6s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+@keyframes forsvind_blue_kf {
+  100% {
+    rotate: 600deg;
+    scale: 0;
+  }
+}
+
+.forsvind_red {
+  animation-name: forsvind_red_kf;
+  animation-duration: 0.6s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+@keyframes forsvind_red_kf {
+  20% {
+    scale: 1.5;
+  }
+  30% {
+    scale: 1;
+  }
+  100% {
+    scale: 0;
+  }
+}
+
+.frys {
+  animation-play-state: paused;
+}
+
+.delay1 {
+  animation-delay: 0s;
+}
+
+.delay2 {
+  animation-delay: 0.3s;
+}
+
+.delay3 {
+  animation-delay: 0.6s;
+}
+
+.delay4 {
+  animation-delay: 0.9s;
+}
+
+#time_container {
+  position: absolute;
+  width: 3%;
+  height: 30%;
+  top: 5%;
+  left: 95%;
+  border: 0.2vw solid white;
+}
+
+#time_sprite {
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 100%;
+  background-color: lime;
+}
+
+.time {
+  animation-name: time_kf;
+  animation-duration: 20s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes time_kf {
+  0% {
+    transform: scaleY(1);
+    background-color: lime;
+  }
+
+  50% {
+    transform: scaleY(0.5);
+    background-color: yellow;
+  }
+
+  100% {
+    transform: scaleY(0);
+    background-color: red;
+  }
+}
+@media screen and (max-width: 1300px) {
+  #sounds {
+    display: none !important;
+  }
+}

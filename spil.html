@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="rugby.css"> -->
+    <link rel="stylesheet" href="spil.css">
+    <link rel="icon" type="image/x-icon" href="./rugbyball.ico">
+    <title>Rugbygame</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="svg/logo.png" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./spil.html">Spil</a></li>
+                <li><a href="./assets.html">Assets</a></li>
+                <li><a href="./grafik.html">Grafik</a></li>
+                <li><a href="./teknik.html">Teknik</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <h1 class="luckiest-guy-regular">HIT OR MISS</h1>
+    </div>
+
+    <script src="menu.js"></script>
+
+    <main>
+        <div id="screen">
+            <div id="game">
+                <div id="game_background"></div>
+                <div id="game_elements">
+                    <div id="blueball_container1">
+                        <div id="blueball_sprite1"></div>
+                    </div>
+                    <div id="blueball_container2">
+                        <div id="blueball_sprite2"></div>
+                    </div>
+                    <div id="blueball_container3">
+                        <div id="blueball_sprite3"></div>
+                    </div>
+                    <div id="redball_container1">
+                        <div id="redball_sprite1"></div>
+                    </div>
+                    <div id="redball_container2">
+                        <div id="redball_sprite2"></div>
+                    </div>
+                    <div id="redball_container3">
+                        <div id="redball_sprite3"></div>
+                    </div>
+                </div>
+                <div id="game_foreground"></div>
+                <div id="game_ui">
+                    <div id="score_board">
+                        <div id="points"></div>
+                    </div>
+                    <div id="life_board">
+                        <div id="liv"></div>
+                    </div>
+                    <div id="time_board">
+                        <div id="time_container">
+                            <div id="time_sprite"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="start">
+                <div id="start_text">
+                    <p>Hello,<br>
+                        My Name is John. I am a rugby player.<br>
+                        Can you help me in my training?<br>
+                        So you will have to catch the blue rugby balls.<br>
+                        Remember if you catch the red ones. We will lose.<br>
+                        Let's get started!<br>
+                    </p>
+
+                </div>
+                <div id="start_knap"></div>
+            </div>
+            <div id="game_over">
+                <div id="game_over_text"></div>
+                <div id="genstart1"></div>
+            </div>
+            <div id="level_complete">
+                <div id="level_complete_text"></div>
+                <div id="genstart2"></div>
+
+            </div>
+            <div id="sounds">
+                <!-- TODO: Tilføj audio elementer her -->
+                <audio src="sounds/opps_01.mp3" id="sad_sound" controls></audio>
+                <audio src="sounds/clap_01.mp3" id="happy_sound" controls></audio>
+                <audio src="sounds/start-game.mp3" id="game-music" controls></audio>
+
+
+
+            </div>
+
+        </div>
+    </main>
+    <footer>Lavet af: Farwa</footer>
+    <script src="spil.js"></script>
+</body>
+
+</html>
